@@ -1,0 +1,18 @@
+[Unit]
+Description=AI Computer Chrome (localhost CDP only)
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+Environment=AICOMPUTER_HOME=%h/.aicomputer
+Environment=DISPLAY=:10.0
+EnvironmentFile=-%h/.config/aicomputer/chrome.env
+# After clone, replace ExecStart with the absolute path to launch-chrome.sh, e.g.:
+# ExecStart=/home/YOU/ai_companion/ai_computer/chrome/launch-chrome.sh
+ExecStart=%h/ai_companion/ai_computer/chrome/launch-chrome.sh
+ExecStop=/bin/true
+
+[Install]
+WantedBy=default.target

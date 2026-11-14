@@ -1,0 +1,2 @@
+[console_scripts]
+aicomputer = aicomputer.cli:main

@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: aicomputer
+Version: 0.1.0
+Summary: Local browser agent helpers for the AI Computer VPS stack
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: playwright<2,>=1.48.0
+Requires-Dist: click<9,>=8.1.7
+Requires-Dist: pydantic<3,>=2.7.0
+Requires-Dist: pyyaml<7,>=6.0.1
+
+# aicomputer Python package
+
+Local helpers installed into `~/.aicomputer/venv` by `scripts/05-install-agent-runtime.sh`.
+
+```bash
+aicomputer doctor
+aicomputer chrome start|status
+aicomputer inbox
+aicomputer reels prepare|status|confirm|abort
+```
+
+Development install:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
