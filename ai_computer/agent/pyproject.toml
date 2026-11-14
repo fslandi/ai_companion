@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aicomputer"
+version = "0.1.0"
+description = "Local browser agent helpers for the AI Computer VPS stack"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "playwright>=1.48.0,<2",
+  "click>=8.1.7,<9",
+  "pydantic>=2.7.0,<3",
+  "pyyaml>=6.0.1,<7",
+]
+
+[project.scripts]
+aicomputer = "aicomputer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aicomputer*"]

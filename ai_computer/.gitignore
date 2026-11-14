@@ -1,0 +1,10 @@
+media/inbox/*
+!media/inbox/.gitkeep
+media/prepared/*
+!media/prepared/.gitkeep
+agent/.venv/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+
+agent/*.egg-info/
