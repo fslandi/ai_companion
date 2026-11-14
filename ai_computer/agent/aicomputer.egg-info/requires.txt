@@ -1,4 +1,0 @@
-playwright<2,>=1.48.0
-click<9,>=8.1.7
-pydantic<3,>=2.7.0
-pyyaml<7,>=6.0.1
